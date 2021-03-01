@@ -24,11 +24,10 @@
 
         });
 
-        socket.emit('message', { status: "Ok" });
-        socket.on('message', function (payload) {
-            console.log("Mensaje:", payload);
+        socket.on('bandas',(payload)=>{
+            console.clear();
+            console.table(payload);
         });
-
     </script>
 </body>
 
